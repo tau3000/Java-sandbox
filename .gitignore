@@ -19,3 +19,12 @@ local.properties
 .classpath
 .project
 .settings/
+
+ .scala_dependencies
+
+ # IntelliJ IDEA settings
+*.idea/
+*.iml
+
+ # building
+ target
