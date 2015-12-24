@@ -2,6 +2,7 @@ import singleton.*;
 import factorymethod.*;
 import abstractfactory.*;
 import prototype.*;
+import composite.*;
 
 public class DesignPattern {
 
@@ -21,5 +22,9 @@ public class DesignPattern {
 
         PrototypeTest prototypeTest = new PrototypeTest();
         prototypeTest.test();
+        System.out.println();
+
+        CompositeTest compositeTest = new CompositeTest();
+        compositeTest.test();
     }
 }
