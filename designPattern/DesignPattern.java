@@ -1,5 +1,6 @@
 import singleton.*;
 import factorymethod.*;
+import abstractfactory.*;
 
 public class DesignPattern {
 
@@ -11,5 +12,9 @@ public class DesignPattern {
 
         FactoryMethodTest factoryMethodTest = new FactoryMethodTest();
         factoryMethodTest.test();
+        System.out.println();
+
+        AbstractFactoryTest abstractFactoryTest = new AbstractFactoryTest();
+        abstractFactoryTest.test();
     }
 }
