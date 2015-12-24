@@ -3,6 +3,7 @@ import factorymethod.*;
 import abstractfactory.*;
 import prototype.*;
 import composite.*;
+import adapter.*;
 
 public class DesignPattern {
 
@@ -26,5 +27,10 @@ public class DesignPattern {
 
         CompositeTest compositeTest = new CompositeTest();
         compositeTest.test();
+        System.out.println();
+
+        AdapterTest adapterTest = new AdapterTest();
+        adapterTest.test();
+        System.out.println();
     }
 }
