@@ -4,6 +4,7 @@ import abstractfactory.*;
 import prototype.*;
 import composite.*;
 import adapter.*;
+import proxy.*;
 
 public class DesignPattern {
 
@@ -31,6 +32,10 @@ public class DesignPattern {
 
         AdapterTest adapterTest = new AdapterTest();
         adapterTest.test();
+        System.out.println();
+
+        ProxyTest proxyTest = new ProxyTest();
+        proxyTest.test();
         System.out.println();
     }
 }
