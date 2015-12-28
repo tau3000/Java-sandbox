@@ -5,6 +5,7 @@ import prototype.*;
 import composite.*;
 import adapter.*;
 import proxy.*;
+import bridge.*;
 
 public class DesignPattern {
 
@@ -36,6 +37,10 @@ public class DesignPattern {
 
         ProxyTest proxyTest = new ProxyTest();
         proxyTest.test();
+        System.out.println();
+
+        BridgeTest bridgeTest = new BridgeTest();
+        bridgeTest.test();
         System.out.println();
     }
 }
