@@ -6,6 +6,7 @@ import composite.*;
 import adapter.*;
 import proxy.*;
 import bridge.*;
+import flyweight.*;
 
 public class DesignPattern {
 
@@ -41,6 +42,10 @@ public class DesignPattern {
 
         BridgeTest bridgeTest = new BridgeTest();
         bridgeTest.test();
+        System.out.println();
+
+        FlyweightTest flyweightTest = new FlyweightTest();
+        flyweightTest.test();
         System.out.println();
     }
 }
