@@ -7,6 +7,7 @@ import adapter.*;
 import proxy.*;
 import bridge.*;
 import flyweight.*;
+import iterator.*;
 
 public class DesignPattern {
 
@@ -46,6 +47,10 @@ public class DesignPattern {
 
         FlyweightTest flyweightTest = new FlyweightTest();
         flyweightTest.test();
+        System.out.println();
+
+        IteratorTest iteratorTest = new IteratorTest();
+        iteratorTest.test();
         System.out.println();
     }
 }

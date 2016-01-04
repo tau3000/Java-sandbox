@@ -23,5 +23,4 @@ public class FlyHumanFactory{
         }
         return flyHuman;
     }
-
 }
