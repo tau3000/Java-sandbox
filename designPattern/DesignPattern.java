@@ -10,6 +10,7 @@ import flyweight.*;
 import iterator.*;
 import templatemethod.*;
 import command.*;
+import state.*;
 
 public class DesignPattern {
 
@@ -61,6 +62,10 @@ public class DesignPattern {
 
         CommandTest commandTest = new CommandTest();
         commandTest.test();
+        System.out.println();
+
+        StateTest stateTest = new StateTest();
+        stateTest.test();
         System.out.println();
     }
 }
