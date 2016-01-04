@@ -8,6 +8,7 @@ import proxy.*;
 import bridge.*;
 import flyweight.*;
 import iterator.*;
+import templatemethod.*;
 
 public class DesignPattern {
 
@@ -51,6 +52,10 @@ public class DesignPattern {
 
         IteratorTest iteratorTest = new IteratorTest();
         iteratorTest.test();
+        System.out.println();
+
+        TemplateMethodTest templateMethodTest = new TemplateMethodTest();
+        templateMethodTest.test();
         System.out.println();
     }
 }
