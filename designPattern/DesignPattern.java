@@ -9,6 +9,7 @@ import bridge.*;
 import flyweight.*;
 import iterator.*;
 import templatemethod.*;
+import command.*;
 
 public class DesignPattern {
 
@@ -56,6 +57,10 @@ public class DesignPattern {
 
         TemplateMethodTest templateMethodTest = new TemplateMethodTest();
         templateMethodTest.test();
+        System.out.println();
+
+        CommandTest commandTest = new CommandTest();
+        commandTest.test();
         System.out.println();
     }
 }

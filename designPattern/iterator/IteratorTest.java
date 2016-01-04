@@ -2,6 +2,8 @@ package iterator;
 
 public class IteratorTest{
     public void test(){
+        System.out.println("Iterator Test");
+
         ConcreteAggregate concreteAggregate = new ConcreteAggregate();
         concreteAggregate.addRamen(new Ramen("豚骨"));
         concreteAggregate.addRamen(new Ramen("味噌"));
