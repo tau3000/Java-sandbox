@@ -11,6 +11,7 @@ import iterator.*;
 import templatemethod.*;
 import command.*;
 import state.*;
+import observer.*;
 
 public class DesignPattern {
 
@@ -66,6 +67,10 @@ public class DesignPattern {
 
         StateTest stateTest = new StateTest();
         stateTest.test();
+        System.out.println();
+
+        ObserverTest observerTest = new ObserverTest();
+        observerTest.test();
         System.out.println();
     }
 }
