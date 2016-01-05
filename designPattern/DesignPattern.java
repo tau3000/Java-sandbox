@@ -12,6 +12,7 @@ import templatemethod.*;
 import command.*;
 import state.*;
 import observer.*;
+import multicast.*;
 
 public class DesignPattern {
 
@@ -72,5 +73,8 @@ public class DesignPattern {
         ObserverTest observerTest = new ObserverTest();
         observerTest.test();
         System.out.println();
+
+        MulticastTest multicastTest = new MulticastTest();
+        multicastTest.test();
     }
 }
