@@ -13,8 +13,15 @@ public class Number<T> {
         }
         this.number = number;
     }
-
+    
     public void print() {
         System.out.print(number);
+    }
+    
+    /**
+     * @return 自然数ではないのでfalseを返す
+     */
+    public boolean isPositive(){
+        return false;
     }
 }

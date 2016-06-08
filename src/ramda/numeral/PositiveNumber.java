@@ -1,18 +1,26 @@
 package ramda.numeral;
 
-public class PositiveNumber<T> extends Number<T>{
+public class PositiveNumber<T> extends Number<T> {
 
     public PositiveNumber(T number) {
         super(number);
-        if (!(number.getClass() == Double.class)) {
+        if ((number.getClass() == Double.class)) {
             throw new IllegalArgumentException();
         }
-        if ((int)number <= 0) {
+        if ((int) number <= 0) {
             throw new IllegalArgumentException();
         }
     }
-    
-    public void print(){
+
+    public void print() {
         System.out.print(number);
+    }
+
+    /**
+     * @return 自然数ではないのでtrueを返す
+     */
+    @Override
+    public boolean isPositive() {
+        return true;
     }
 }

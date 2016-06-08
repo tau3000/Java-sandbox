@@ -1,16 +1,15 @@
 package ramda.numeral;
 
 public enum Expression {
-    MARU("。"),
-    DESU("です");
-    
+    MARU("。"), DESU("です");
+
     private final String s;
-    
-    private Expression(String s){
+
+    private Expression(String s) {
         this.s = s;
     }
-    
-    void print(){
+
+    void print() {
         System.out.print(s);
     }
 }
