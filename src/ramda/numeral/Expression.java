@@ -11,6 +11,6 @@ public enum Expression {
     }
     
     void print(){
-        System.out.println(s);
+        System.out.print(s);
     }
 }
