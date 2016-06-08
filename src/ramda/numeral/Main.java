@@ -8,5 +8,6 @@ public class Main {
         
         CounterSuffix.Hon.print();
         
+        Expression.MARU.print();
     }
 }
