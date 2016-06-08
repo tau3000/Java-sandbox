@@ -6,6 +6,7 @@ public class Main {
         Number<Integer> numInt = new Number<>(3);
         numInt.print();
         
+        CounterSuffix.Hon.print();
         
     }
 }
