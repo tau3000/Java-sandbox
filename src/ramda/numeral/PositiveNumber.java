@@ -3,7 +3,7 @@ package ramda.numeral;
 public class PositiveNumber extends Number{
     private static final long serialVersionUID = 1L;
     
-    //正の整数
+    //0または正の整数
     private int number;
     
     public PositiveNumber(int number) {
@@ -15,7 +15,7 @@ public class PositiveNumber extends Number{
     }
     
     public void setNumber(int number){
-        if (number <= 0) {
+        if (number < 0) {
             throw new IllegalArgumentException();
         }
         this.number = number;
