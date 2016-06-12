@@ -8,8 +8,9 @@ public enum Expression {
     private Expression(String s) {
         this.s = s;
     }
-
-    void print() {
-        System.out.print(s);
+    
+    @Override
+    public String toString() {
+        return s;
     }
 }

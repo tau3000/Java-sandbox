@@ -1,11 +1,11 @@
 package ramda.numeral;
 
 public class Printer {
-    private Number<?> number;
+    private PositiveNumber number;
     private CounterSuffix counterSuffix;
     private Expression expression;
 
-    public Printer(Number<?> number, CounterSuffix counterSuffix, Expression expression) {
+    public Printer(PositiveNumber number, CounterSuffix counterSuffix, Expression expression) {
         this.number = number;
         this.counterSuffix = counterSuffix;
         this.expression = expression;
@@ -17,9 +17,11 @@ public class Printer {
                 throw new IllegalStateException();
             }
         }
-        number.print();
-        counterSuffix.print();
-        expression.print();
-        System.out.println("");
+        System.out.println(number.toString() + counterSuffix.toString() + expression.toString());
+    }
+    
+    @Override
+    public String toString() {
+        return number.toString() + counterSuffix.toString() + expression.toString();
     }
 }
