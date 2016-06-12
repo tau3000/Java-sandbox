@@ -22,17 +22,17 @@ public class Context {
         this.expression = expression;
         return this;
     }
-
-    public static void print(final Consumer<Context> builder) {
+    
+    public static String create(final Consumer<Context> builder) {
         Context context = new Context();
         builder.accept(context);
         if (context.counterSuffix == null) {
             throw new NullPointerException();
         }
         if (context.expression == null) {
-            System.out.println(context.counterSuffix.toString());
+            return context.counterSuffix.toString();
         } else {
-            System.out.println(context.counterSuffix.toString() + context.expression.toString());
+            return context.counterSuffix.toString() + context.expression.toString();
         }
     }
 }

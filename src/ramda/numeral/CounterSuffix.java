@@ -1,5 +1,6 @@
 package ramda.numeral;
 
-interface CounterSuffix {
-    boolean isOnlyPositive();
+abstract class CounterSuffix {
+    protected Number number;
+    abstract boolean isOnlyPositive();
 }

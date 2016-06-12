@@ -1,9 +1,8 @@
 package ramda.numeral;
 
-public class Degree implements CounterSuffix {
+public class Degree extends CounterSuffix {
     
     private static final String degree = "度";
-    private Number number;
     
     public Degree(Number number) {
         this.number = number;

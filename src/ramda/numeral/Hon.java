@@ -1,8 +1,7 @@
 package ramda.numeral;
 
-public class Hon implements CounterSuffix {
+public class Hon extends CounterSuffix {
     private static final String hon = "本";
-    private Number number;
     
     public Hon(Number number) {
         this.number = number;
