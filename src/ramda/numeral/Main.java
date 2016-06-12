@@ -1,9 +1,13 @@
 package ramda.numeral;
 
+import java.util.function.Consumer;
+
 public class Main {
 
     public static void main(String[] args) {
-        Printer printer = new Printer(new PositiveNumber(new Integer(3)), new Hon(), Expression.MARU);
-        printer.print();
+        Consumer<Context> builder = (context) -> context.number(new Integer(-30))
+                                                        .counterSuffix(new Degree())
+                                                        .expression(Expression.DESU);
+        Context.print(builder);
     }
 }
