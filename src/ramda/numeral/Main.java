@@ -12,15 +12,14 @@ public class Main {
         // 10本 expressionはnullでも文章になるので可
         Consumer<Context> builder2 = (context) -> context.number(new Integer(10)).counterSuffix(new Hon());
         Context.print(builder2);
-        
+
         // -10本です 負の数を許可しない単位の時はException
-        try{
+        try {
             Consumer<Context> builder3 = (context) -> context.number(new Integer(-10)).counterSuffix(new Hon());
             Context.print(builder3);
-        }
-        catch(IllegalStateException ise){
+        } catch (IllegalStateException ise) {
             System.out.println("「-10本です」のような表現はできません");
-            ise.printStackTrace();
+//            ise.printStackTrace();
         }
     }
 }
