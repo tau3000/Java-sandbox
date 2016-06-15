@@ -5,7 +5,10 @@ public class Degree extends CounterSuffix {
     private static final String degree = "度";
     
     public Degree(Number number) {
-        this.number = number;
+        if(number == null){
+            throw new IllegalArgumentException();
+        }
+        this.number = number.intValue();
     }
     
     @Override

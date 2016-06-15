@@ -6,25 +6,25 @@ package ramda.numeral;
 
 import java.util.function.Consumer;
 
-public class Context {
-    private Context() {
+public class NumericalContext {
+    private NumericalContext() {
     }
 
     private CounterSuffix counterSuffix;
     private Expression expression;
 
-    public Context counterSuffix(CounterSuffix counterSuffix) {
+    public NumericalContext counterSuffix(CounterSuffix counterSuffix) {
         this.counterSuffix = counterSuffix;
         return this;
     }
 
-    public Context expression(Expression expression) {
+    public NumericalContext expression(Expression expression) {
         this.expression = expression;
         return this;
     }
     
-    public static String create(final Consumer<Context> builder) {
-        Context context = new Context();
+    public static String create(final Consumer<NumericalContext> builder) {
+        NumericalContext context = new NumericalContext();
         builder.accept(context);
         if (context.counterSuffix == null) {
             throw new NullPointerException();

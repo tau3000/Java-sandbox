@@ -4,10 +4,10 @@ public class Hon extends CounterSuffix {
     private static final String hon = "本";
     
     public Hon(Number number) {
-        this.number = number;
-        if(number.doubleValue() < 0){
+        if(number == null || number.doubleValue() < 0){
             throw new IllegalArgumentException();
         }
+        this.number = number.intValue();
     }
 
     @Override
