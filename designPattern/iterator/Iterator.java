@@ -1,6 +1,7 @@
 package iterator;
 
 public interface Iterator {
-    public abstract boolean hasNext();
-    public abstract Object next();
+    boolean hasNext();
+
+    Object next();
 }

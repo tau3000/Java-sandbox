@@ -1,5 +1,6 @@
 package iterator;
 
 public interface Aggregate {
-    public abstract Iterator iterator();
+    // Aggregate は集合体の意味
+    Iterator iterator();
 }

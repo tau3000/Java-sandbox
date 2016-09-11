@@ -1,18 +1,17 @@
-import singleton.*;
-import factorymethod.*;
-import abstractfactory.*;
-import prototype.*;
-import composite.*;
-import adapter.*;
-import proxy.*;
-import bridge.*;
-import flyweight.*;
-import iterator.*;
-import templatemethod.*;
-import command.*;
-import state.*;
-import observer.*;
-import multicast.*;
+import abstractfactory.AbstractFactoryTest;
+import adapter.AdapterTest;
+import bridge.BridgeTest;
+import command.CommandTest;
+import composite.CompositeTest;
+import factorymethod.FactoryMethodTest;
+import flyweight.FlyweightTest;
+import multicast.MulticastTest;
+import observer.ObserverTest;
+import prototype.PrototypeTest;
+import proxy.ProxyTest;
+import singleton.SingletonTest;
+import state.StateTest;
+import templatemethod.TemplateMethodTest;
 
 public class DesignPattern {
 
@@ -52,10 +51,6 @@ public class DesignPattern {
 
         FlyweightTest flyweightTest = new FlyweightTest();
         flyweightTest.test();
-        System.out.println();
-
-        IteratorTest iteratorTest = new IteratorTest();
-        iteratorTest.test();
         System.out.println();
 
         TemplateMethodTest templateMethodTest = new TemplateMethodTest();
