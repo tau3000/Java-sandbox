@@ -1,5 +1,4 @@
 import abstractfactory.AbstractFactoryTest;
-import adapter.AdapterTest;
 import bridge.BridgeTest;
 import command.CommandTest;
 import composite.CompositeTest;
@@ -35,10 +34,6 @@ public class DesignPattern {
 
         CompositeTest compositeTest = new CompositeTest();
         compositeTest.test();
-        System.out.println();
-
-        AdapterTest adapterTest = new AdapterTest();
-        adapterTest.test();
         System.out.println();
 
         ProxyTest proxyTest = new ProxyTest();
