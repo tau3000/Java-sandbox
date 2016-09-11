@@ -2,7 +2,6 @@ package adapter;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
 
@@ -16,12 +15,13 @@ public class Main {
         final List<DayLink> dayLinks = Arrays.asList(today, yesterday, tomorrow, future);
 
         for (DayLink dl : dayLinks) {
-            final Map<MapKeys, String> link = dl.getLink();
-            System.out.println(link.get(MapKeys.DAY));
-            if(link.get(MapKeys.LINK).isEmpty()){
+            final String link = dl.getLink();
+            final String dayString = dl.getDayString();
+            System.out.println(dayString);
+            if (link.isEmpty()) {
                 System.out.println("no link");
-            } else{
-                System.out.println(link.get(MapKeys.LINK));
+            } else {
+                System.out.println(link);
             }
         }
     }

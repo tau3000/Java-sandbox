@@ -5,14 +5,16 @@ import java.util.Collections;
 
 public class DayLink extends AbstractLink {
 
+    private DayString dayString;
+
     public DayLink(String id, String template) {
         super(id, template);
-        setDay(id);
+        dayString = new DayString(id);
         setLink(id);
     }
 
-    public void setDay(String id) {
-        resultMap.put(MapKeys.DAY, new DayString(id).toString());
+    public String getDayString() {
+        return dayString.get();
     }
 
     @Override
