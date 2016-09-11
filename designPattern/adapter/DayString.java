@@ -5,15 +5,13 @@ import java.time.LocalDate;
 public class DayString {
     LocalDate date;
 
-    public DayString(String id) {
-        if (id.equals("today")) {
+    public DayString(DayIds id) {
+        if (id.equals(DayIds.TODAY)) {
             date = LocalDate.now();
-        } else if (id.equals("yesterday")) {
+        } else if (id.equals(DayIds.YESTERDAY)) {
             date = LocalDate.now().minusDays(1);
-        } else if (id.equals("tomorrow")) {
+        } else if (id.equals(DayIds.TOMORROW)) {
             date = LocalDate.now().plusDays(1);
-        } else if (id.equals("future")) {
-            date = LocalDate.MAX;
         } else {
             throw new IllegalArgumentException();
         }

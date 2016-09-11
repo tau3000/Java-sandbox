@@ -6,11 +6,11 @@ abstract class AbstractLink {
 
     protected String resultLink;
 
-    public AbstractLink(String id, String template) {
+    public AbstractLink(DayIds id, String template) {
         urlTemplate = template;
     }
 
-    public void setLink(String id) {
+    public void setLink(DayIds id) {
         resultLink = createLink(id);
     }
 
@@ -18,6 +18,6 @@ abstract class AbstractLink {
         return resultLink;
     }
 
-    abstract String createLink(String id);
+    abstract String createLink(DayIds id);
 
 }
