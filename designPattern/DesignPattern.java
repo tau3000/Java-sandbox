@@ -10,7 +10,6 @@ import prototype.PrototypeTest;
 import proxy.ProxyTest;
 import singleton.SingletonTest;
 import state.StateTest;
-import templatemethod.TemplateMethodTest;
 
 public class DesignPattern {
 
@@ -46,10 +45,6 @@ public class DesignPattern {
 
         FlyweightTest flyweightTest = new FlyweightTest();
         flyweightTest.test();
-        System.out.println();
-
-        TemplateMethodTest templateMethodTest = new TemplateMethodTest();
-        templateMethodTest.test();
         System.out.println();
 
         CommandTest commandTest = new CommandTest();
