@@ -1,9 +1,8 @@
 package factorymethod;
 
-
-public class DefaultCellFactory extends AbstractFactory<String>{
+public class DefaultCellFactory<T> extends AbstractFactory<T> {
     @Override
-    void setCellOption(Cell<String> cell) {
+    void setCellOption(Cell<T> cell) {
         Option option = null;
         cell.addOption(option);
     }

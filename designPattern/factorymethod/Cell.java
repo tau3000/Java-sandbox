@@ -1,8 +1,10 @@
 package factorymethod;
 
-public class Cell<T> extends AbstractCell {
+import lombok.Getter;
 
-    private Option option;
+public class Cell<T> extends AbstractCell<T> {
+
+    @Getter private Option option;
 
     public Cell(int row, int col, T value) {
         this.row = row;

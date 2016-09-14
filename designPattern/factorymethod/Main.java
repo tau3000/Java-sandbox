@@ -6,10 +6,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        DefaultCellFactory defaultCellFactory = new DefaultCellFactory();
-        WarningIntegerCellFactory warningIntegerCellFactory = new WarningIntegerCellFactory();
+        DefaultCellFactory<String> defaultCellFactory = new DefaultCellFactory<>();
+        ColorCellFactory<Integer> warningIntegerCellFactory = new ColorCellFactory<>("Red");
 
-        List<Cell> cells = new ArrayList<>();
+        @SuppressWarnings("rawtypes") List<Cell> cells = new ArrayList<>();
         cells.add(defaultCellFactory.create(1, 1, "default"));
         cells.add(warningIntegerCellFactory.create(1, 2, 1));
     }
