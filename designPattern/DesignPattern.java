@@ -2,7 +2,6 @@ import abstractfactory.AbstractFactoryTest;
 import bridge.BridgeTest;
 import command.CommandTest;
 import composite.CompositeTest;
-import factorymethod.FactoryMethodTest;
 import flyweight.FlyweightTest;
 import multicast.MulticastTest;
 import observer.ObserverTest;
@@ -17,10 +16,6 @@ public class DesignPattern {
         // ここにデザインパターンのインスタンスを１つ作って実行。
         SingletonTest singletonTest = new SingletonTest();
         singletonTest.test();
-        System.out.println();
-
-        FactoryMethodTest factoryMethodTest = new FactoryMethodTest();
-        factoryMethodTest.test();
         System.out.println();
 
         AbstractFactoryTest abstractFactoryTest = new AbstractFactoryTest();
