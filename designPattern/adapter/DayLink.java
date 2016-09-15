@@ -1,16 +1,17 @@
 package adapter;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.time.LocalDate;
 
 public class DayLink extends AbstractLink {
 
     private DayString dayString;
+    private LocalDate date;
 
-    public DayLink(DayIds id, String template) {
-        super(id, template);
-        dayString = new DayString(id);
-        setLink(id);
+    public DayLink(LocalDate date, String template) {
+        super(template);
+        dayString = new DayString(date);
+        this.date = date;
+        setLink(date.toString());
     }
 
     public String getDayString() {
@@ -18,17 +19,14 @@ public class DayLink extends AbstractLink {
     }
 
     @Override
-    public String createLink(DayIds id) {
-        final Set<DayIds> excludeSet = new HashSet<>();
+    public String createLink(String link) {
         // 今まではDayStringクラスを使って日付表示だけだったが、
         // システムのバージョンアップに伴って、
         // idが現在より前の時は、Linkを付けることになったとする
-        excludeSet.add(DayIds.YESTERDAY);
-
-        if (!excludeSet.contains(id)) {
+        final LocalDate now = LocalDate.now();
+        if (date.compareTo(now) <= 0) {
             return urlTemplate + dayString.get();
         }
         return "";
     }
-
 }

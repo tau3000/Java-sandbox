@@ -1,5 +1,6 @@
 package adapter;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,13 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
         final String url = "https://www.yoshixmk.com/";
-        final List<DayLink> dayLinks =
-            Arrays.asList(new DayLink(DayIds.TODAY, url), new DayLink(DayIds.YESTERDAY, url), new DayLink(DayIds.TOMORROW, url));
+        // 今日、昨日、明日
+        final List<LocalDate> dayLinks = Arrays.asList(LocalDate.now(), LocalDate.now().minusDays(1), LocalDate.now().plusDays(1));
 
-        for (DayLink dl : dayLinks) {
-            final String link = dl.getLink();
-            final String dayString = dl.getDayString();
-            System.out.println(dayString);
+        for (LocalDate dl : dayLinks) {
+            final DayLink dayLink = new DayLink(dl, url);
+            System.out.println(dayLink.getDayString());
+            final String link = dayLink.getLink();
             if (link.isEmpty()) {
                 System.out.println("no link");
             } else {
