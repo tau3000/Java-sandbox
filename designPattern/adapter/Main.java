@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args) {
         final String url = "https://www.yoshixmk.com/";
         // 今日、昨日、明日
-        final List<LocalDate> dayLinks = Arrays.asList(LocalDate.now(), LocalDate.now().minusDays(1), LocalDate.now().plusDays(1));
+        final List<LocalDate> dates = Arrays.asList(LocalDate.now(), LocalDate.now().minusDays(1), LocalDate.now().plusDays(1));
 
-        for (LocalDate dl : dayLinks) {
+        for (LocalDate dl : dates) {
             final DayLink dayLink = new DayLink(dl, url);
             System.out.println(dayLink.getDayString());
             final String link = dayLink.getLink();

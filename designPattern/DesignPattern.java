@@ -7,17 +7,12 @@ import multicast.MulticastTest;
 import observer.ObserverTest;
 import prototype.PrototypeTest;
 import proxy.ProxyTest;
-import singleton.SingletonTest;
 import state.StateTest;
 
 public class DesignPattern {
 
     public static void main(String[] args) {
         // ここにデザインパターンのインスタンスを１つ作って実行。
-        SingletonTest singletonTest = new SingletonTest();
-        singletonTest.test();
-        System.out.println();
-
         AbstractFactoryTest abstractFactoryTest = new AbstractFactoryTest();
         abstractFactoryTest.test();
         System.out.println();
