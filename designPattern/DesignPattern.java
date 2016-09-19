@@ -5,7 +5,6 @@ import composite.CompositeTest;
 import flyweight.FlyweightTest;
 import multicast.MulticastTest;
 import observer.ObserverTest;
-import prototype.PrototypeTest;
 import proxy.ProxyTest;
 import state.StateTest;
 
@@ -15,10 +14,6 @@ public class DesignPattern {
         // ここにデザインパターンのインスタンスを１つ作って実行。
         AbstractFactoryTest abstractFactoryTest = new AbstractFactoryTest();
         abstractFactoryTest.test();
-        System.out.println();
-
-        PrototypeTest prototypeTest = new PrototypeTest();
-        prototypeTest.test();
         System.out.println();
 
         CompositeTest compositeTest = new CompositeTest();
