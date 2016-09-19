@@ -18,7 +18,7 @@ public class Page {
         this.pageBottom = pageBottom;
     }
 
-    public String getHtml() {
+    public String toHtml() {
         return pageTop.get() + contents + pageBottom.get();
     }
 }
