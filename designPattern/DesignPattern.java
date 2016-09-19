@@ -1,4 +1,3 @@
-import abstractfactory.AbstractFactoryTest;
 import bridge.BridgeTest;
 import command.CommandTest;
 import composite.CompositeTest;
@@ -12,10 +11,6 @@ public class DesignPattern {
 
     public static void main(String[] args) {
         // ここにデザインパターンのインスタンスを１つ作って実行。
-        AbstractFactoryTest abstractFactoryTest = new AbstractFactoryTest();
-        abstractFactoryTest.test();
-        System.out.println();
-
         CompositeTest compositeTest = new CompositeTest();
         compositeTest.test();
         System.out.println();
