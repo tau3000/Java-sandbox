@@ -1,25 +1,17 @@
 package builder;
 
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
-        String keyword;
-        // keywordを取得したとする
-        keyword = "ABC Company";
+        // titleを使用する場合
+        final User user = new User.Builder("testName", new Integer(24)).title("CEO").build();
+        System.out.println(user);
 
-        final JsonTextBuilder jsonTextBuilder = new JsonTextBuilder();
-        GlobalSearchDirector director1 = new GlobalSearchDirector(jsonTextBuilder);
-        director1.construct();
-        final List<String> result1 = jsonTextBuilder.getResult();
-        System.out.println(result1.get(0) + keyword + result1.get(1));
+        System.out.println();
 
-        final ResultTextBuilder resultTextBuilder = new ResultTextBuilder();
-        GlobalSearchDirector director2 = new GlobalSearchDirector(resultTextBuilder);
-        director2.construct();
-        final List<String> result2 = resultTextBuilder.getResult();
-        System.out.println(result2.get(0) + keyword + result2.get(1));
+        // titleを使用しない場合
+        final User user2 = new User.Builder("testName", 24).build();
+        System.out.println(user2);
     }
 
 }
