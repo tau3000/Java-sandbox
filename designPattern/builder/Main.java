@@ -1,10 +1,9 @@
 package builder;
 
 public class Main {
-
     public static void main(String[] args) {
         // titleを使用する場合
-        final User user = new User.Builder("testName", new Integer(24)).title("CEO").build();
+        final User user = new User.Builder("testName", 24).title("CEO").build();
         System.out.println(user);
 
         System.out.println();
@@ -13,5 +12,4 @@ public class Main {
         final User user2 = new User.Builder("testName", 24).build();
         System.out.println(user2);
     }
-
 }
