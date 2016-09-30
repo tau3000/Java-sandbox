@@ -2,7 +2,7 @@ package prototype;
 
 import java.util.HashMap;
 
-public class DealDataCreator {
+public class DealDataManager {
     private HashMap<String, DealData> showcase = new HashMap<>();
 
     public void register(String name, DealData proto) {
