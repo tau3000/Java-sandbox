@@ -3,9 +3,11 @@ package composite;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Getter;
+
 public class Directory implements DirectoryEntry {
     private List<DirectoryEntry> list;
-    private String name;
+    @Getter private String name;
 
     public Directory(String name) {
         this.name = name;
@@ -18,16 +20,14 @@ public class Directory implements DirectoryEntry {
 
     public void remove() {
         if (list == null) {
-            System.out.println(name + ": 削除");
             return;
         }
         list.stream().forEach(e -> {
             e.remove();
+            // 結果をわかりやすくするために必要
+            System.out.println(e.getName() + "\t: 削除");
         });
         // リストを空にする
         list = null;
-
-        // 結果をわかりやすくするために必要
-        System.out.println(name + ": 削除");
     }
 }
