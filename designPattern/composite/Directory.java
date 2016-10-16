@@ -1,29 +1,33 @@
 package composite;
 
-import java.util.List;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.List;
 
+public class Directory implements DirectoryEntry {
+    private List<DirectoryEntry> list;
+    private String name;
 
-public class Directory implements DirectoryEntry{
-    private List<DirectoryEntry> list = null;
-    private String name = null;
-    public Directory(String name){
+    public Directory(String name) {
         this.name = name;
         list = new ArrayList<DirectoryEntry>();
     }
-    public void add(DirectoryEntry entry){
+
+    public void add(DirectoryEntry entry) {
         list.add(entry);
     }
-    public void remove(){
-        Iterator<DirectoryEntry> itr = list.iterator();
-        while(itr.hasNext()){
-            DirectoryEntry entry = itr.next();
-            entry.remove();
+
+    public void remove() {
+        if (list == null) {
+            System.out.println(name + ": 削除");
+            return;
         }
-        System.out.println(name + "を削除しました。");
+        list.stream().forEach(e -> {
+            e.remove();
+        });
+        // リストを空にする
+        list = null;
+
+        // 結果をわかりやすくするために必要
+        System.out.println(name + ": 削除");
     }
 }
-
-//reference web page
-//http://www.techscore.com/tech/DesignPattern/Composite.html/

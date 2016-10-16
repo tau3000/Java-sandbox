@@ -1,5 +1,4 @@
 import command.CommandTest;
-import composite.CompositeTest;
 import flyweight.FlyweightTest;
 import multicast.MulticastTest;
 import observer.ObserverTest;
@@ -10,10 +9,6 @@ public class DesignPattern {
 
     public static void main(String[] args) {
         // ここにデザインパターンのインスタンスを１つ作って実行。
-        CompositeTest compositeTest = new CompositeTest();
-        compositeTest.test();
-        System.out.println();
-
         ProxyTest proxyTest = new ProxyTest();
         proxyTest.test();
         System.out.println();
