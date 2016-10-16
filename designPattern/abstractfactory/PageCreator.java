@@ -1,10 +1,10 @@
 package abstractfactory;
 
 public class PageCreator {
-    private AbstractFactory pageFactory;
+    private AbstractPageFactory pageFactory;
     private String pageName;
 
-    public PageCreator(AbstractFactory pageFactory, String pageName) {
+    public PageCreator(AbstractPageFactory pageFactory, String pageName) {
         this.pageFactory = pageFactory;
         this.pageName = pageName;
     }

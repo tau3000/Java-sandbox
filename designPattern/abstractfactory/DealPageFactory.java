@@ -1,7 +1,7 @@
 package abstractfactory;
 
 // Factory
-public class DealPageFactory extends AbstractFactory {
+public class DealPageFactory extends AbstractPageFactory {
     public PageTop createTop() {
         return new DealPageTop("M&A: M&A案件を探す");
     }

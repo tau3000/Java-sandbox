@@ -1,4 +1,3 @@
-import bridge.BridgeTest;
 import command.CommandTest;
 import composite.CompositeTest;
 import flyweight.FlyweightTest;
@@ -17,10 +16,6 @@ public class DesignPattern {
 
         ProxyTest proxyTest = new ProxyTest();
         proxyTest.test();
-        System.out.println();
-
-        BridgeTest bridgeTest = new BridgeTest();
-        bridgeTest.test();
         System.out.println();
 
         FlyweightTest flyweightTest = new FlyweightTest();

@@ -1,8 +1,8 @@
 package abstractfactory;
 
 // Factory
-public abstract class AbstractFactory {
-    public static AbstractFactory getFactroy(String factoryName) {
+public abstract class AbstractPageFactory {
+    public static AbstractPageFactory getFactroy(String factoryName) {
         switch (factoryName) {
         case "Company":
             return new CompanyPageFactory();
