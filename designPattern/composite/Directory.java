@@ -19,6 +19,7 @@ public class Directory implements DirectoryEntry {
     }
 
     public void remove() {
+        System.out.println(name + "\t: 削除");
         if (list == null) {
             return;
         }

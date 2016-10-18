@@ -1,9 +1,9 @@
 package bridge;
 
 public class Display {
-    protected DiplayImpl impl;
+    protected DiplayMount impl;
 
-    public Display(DiplayImpl impl) {
+    public Display(DiplayMount impl) {
         this.impl = impl;
     }
 

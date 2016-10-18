@@ -1,7 +1,7 @@
 package bridge;
 
 public class SellingPointDisplay extends Display {
-    public SellingPointDisplay(DiplayImpl impl) {
+    public SellingPointDisplay(DiplayMount impl) {
         super(impl);
     }
 

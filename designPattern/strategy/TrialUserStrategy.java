@@ -1,6 +1,6 @@
 package strategy;
 
-public class TrialStrategy implements AbstractStrategy {
+public class TrialUserStrategy implements UserStrategy {
     @Override
     public void execute() {
         System.out.println("トライアルユーザ向けの処理をする");

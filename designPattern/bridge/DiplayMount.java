@@ -1,6 +1,6 @@
 package bridge;
 
-public interface DiplayImpl {
+public interface DiplayMount {
     public void displayImage();
 
     public void displayText();
