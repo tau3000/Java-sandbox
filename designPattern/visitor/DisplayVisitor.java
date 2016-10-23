@@ -6,21 +6,20 @@ public class DisplayVisitor extends Visitor {
 
     @Override
     public void visit(BaseCurrency baseCurrency) {
-        System.out.println(baseCurrency.getName());
-        Iterator<Entry> it = baseCurrency.itrator();
-        while (it.hasNext()) {
-            final Entry entry = it.next();
-            entry.accept(this);
-        }
+        acceptCurrency(baseCurrency);
     }
 
     @Override
     public void visit(Region region) {
-        System.out.println(region.getName());
-        Iterator<Entry> it = region.itrator();
+        acceptCurrency(region);
+    }
+
+    private void acceptCurrency(Entry entry) {
+        System.out.println(entry.getName());
+        Iterator<Entry> it = entry.itrator();
         while (it.hasNext()) {
-            final Entry entry = it.next();
-            entry.accept(this);
+            final Entry e = it.next();
+            e.accept(this);
         }
     }
 

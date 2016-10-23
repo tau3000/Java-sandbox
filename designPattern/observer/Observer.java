@@ -1,7 +1,5 @@
 package observer;
 
 public interface Observer {
-
-    void notify(Event event);
-
+    public void update(ComponentGenerator t);
 }

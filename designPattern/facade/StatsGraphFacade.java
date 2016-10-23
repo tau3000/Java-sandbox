@@ -4,9 +4,9 @@ import java.util.List;
 
 public class StatsGraphFacade {
 
-    public static void serch() {
+    public static void serch(String searchWord) {
         final StatsDataSearch statsDataSearch = new StatsDataSearch();
-        final CachedProperties cachedStatsData = statsDataSearch.search("国債");
+        final CachedProperties cachedStatsData = statsDataSearch.search(searchWord);
 
         final ParseCache parseCache = new ParseCache(cachedStatsData);
         final List<Integer> statsData = parseCache.parse();

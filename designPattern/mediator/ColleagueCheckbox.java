@@ -1,4 +1,4 @@
-package Mediator;
+package mediator;
 
 import java.awt.Checkbox;
 import java.awt.CheckboxGroup;

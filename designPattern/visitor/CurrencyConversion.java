@@ -1,5 +1,7 @@
 package visitor;
 
+import java.util.Iterator;
+
 import lombok.Getter;
 
 public class CurrencyConversion extends Entry {
@@ -22,5 +24,10 @@ public class CurrencyConversion extends Entry {
 
     public void unchecked() {
         isChecked = false;
+    }
+
+    @Override
+    public Iterator<Entry> itrator() {
+        return null;
     }
 }
