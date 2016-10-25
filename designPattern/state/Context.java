@@ -1,21 +1,7 @@
 package state;
 
-public class Context{
-    private State state = null;
+public interface Context {
+    public void changeState(TabState state);
 
-    public Context(){
-        state = AngryState.getInstance();
-    }
-
-    public void setState(State state){
-        this.state = state;
-    }
-
-    public void showCondition(int conditon){
-        state.expressEmotion(this, conditon);
-    }
-
-    public void showSaying(){
-        state.say();
-    }
+    public void doClick(int conditon);
 }

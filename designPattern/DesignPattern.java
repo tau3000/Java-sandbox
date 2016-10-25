@@ -2,7 +2,6 @@ import command.CommandTest;
 import flyweight.FlyweightTest;
 import multicast.MulticastTest;
 import proxy.ProxyTest;
-import state.StateTest;
 
 public class DesignPattern {
 
@@ -18,10 +17,6 @@ public class DesignPattern {
 
         CommandTest commandTest = new CommandTest();
         commandTest.test();
-        System.out.println();
-
-        StateTest stateTest = new StateTest();
-        stateTest.test();
         System.out.println();
 
         MulticastTest multicastTest = new MulticastTest();
